@@ -1,0 +1,17 @@
+---
+title: "Untitled"
+author: "Jackson Hardin"
+date: "2/25/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+pokemon <- read.csv('C://Users//JAH317//Downloads//Pokemon_Database.csv')
+
+```
+
+fdfdffd
