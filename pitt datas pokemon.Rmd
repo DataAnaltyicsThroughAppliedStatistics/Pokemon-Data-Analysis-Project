@@ -1,7 +1,7 @@
 ---
 title: "Untitled"
-author: "DATAs"
-date: "3/15/2021"
+author: "Jackson Hardin"
+date: "2/25/2021"
 output: html_document
 ---
 
@@ -10,32 +10,8 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r}
-# Make sure dplyr is in your User Library/Package List. If it isn't, make sure to enter install.packages("dplyr") into your console. The dplyr package is incredibly useful, as it can make data set manipulation much simpler.
-library(dplyr)
-
-# Loading data set into a variable (change the line to match with your own device)
-pokemon = read.csv('C://Users//kzhang//Downloads//Pokemon_Database.csv')
-
-# Rearranging the Pokemon by region
-pokemon_group = pokemon[order(pokemon$Region.of.Origin),]
-
-# Cutting away variables and specifying what we want to keep
-pokemon_reduced_vars <- pokemon_group[order(pokemon_group$Region.of.Origin),] %>%
-  select("Pokemon.Name", "Region.of.Origin", "Health.Stat", "Attack.Stat","Defense.Stat",  "Primary.Type", "Secondary.Type", "Catch.Rate")
-
-pokemon_reduced_vars
+pokemon <- read.csv('C://Users//JAH317//Downloads//Pokemon_Database.csv')
 
 ```
 
-```{r}
-# Removing observations that don't have a secondary typing
-pokemon_reduced_vars[pokemon_reduced_vars$Secondary.Type != "NULL", ]
-
-subset(pokemon_reduced_vars, Secondary.Type!="NULL") #Alternate method
-
-#Another alternate method
-pokemon_reduced_vars = pokemon_reduced_vars %>%
-  filter(Secondary.Type != 'NULL')
-
-```
-
+fdfdffd
